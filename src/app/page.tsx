@@ -1,7 +1,7 @@
 import { addWarehouse } from "@/actions/add-warehouse";
 
 export default function Home() {
-  const handleClick = () => {
+  const handleClick = () : void => {
     try {
       addWarehouse();
     } catch (err) {
