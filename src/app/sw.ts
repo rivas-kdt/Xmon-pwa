@@ -12,12 +12,12 @@
 // Use type assertion instead of redeclaration
 const sw = self as unknown as ServiceWorkerGlobalScope
 
-sw.addEventListener("install", (event) => {
+sw.addEventListener("install", () => {
   console.log("Service worker installed")
   sw.skipWaiting()
 })
 
-sw.addEventListener("activate", (event) => {
+sw.addEventListener("activate", () => {
   console.log("Service worker activated")
   return sw.clients.claim()
 })
